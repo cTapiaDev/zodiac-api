@@ -134,8 +134,8 @@ app.get('/sign', (req, res) => {
     res.json(sign);
 });
 
-app.get('/sign/id', (req, res) => {
-    const id = [
+app.get('/sign/:id', (req, res) => {
+    const signId = [
         {
             id: 1,
             name: "Aries",
@@ -484,7 +484,15 @@ app.get('/sign/id', (req, res) => {
             ]
         }
     ];
-    res.json(id);
+    
+    const element = parseInt(req.params.id);
+    const sign = signId.find(e => e.id === element);
+
+    if (sign) {
+        res.json(sign)
+    } else {
+        res.status(404).json({message: "Sign not found 404"})
+    }
 });
 
 
