@@ -495,6 +495,132 @@ app.get('/sign/:id', (req, res) => {
     }
 });
 
+app.get('/es/sign', (req, res) => {
+    const signES = [
+        {
+            id: 1,
+            nombre: "Aries",
+            fechas: "21 de Marzo - 19 de Abril",
+            elemento: "Fuego",
+            planetaRegente: "Marte",
+            simbolo: "Carnero",
+            color: "Rojo",
+            logo: "https://i.ibb.co/LQTxGRd/aries.jpg"
+        },
+        {
+            id: 2,
+            nombre: "Tauro",
+            fechas: "20 de Abril - 20 de Mayo",
+            elemento: "Tierra",
+            planetaRegente: "Venus",
+            simbolo: "Toro",
+            color: "Verde",
+            logo: "https://i.ibb.co/sPLrrwD/taurus.jpg"
+        },
+        {
+            id: 3,
+            nombre: "Géminis",
+            fechas: "21 de Mayo - 20 de Junio",
+            elemento: "Aire",
+            planetaRegente: "Mercurio",
+            simbolo: "Gemelos",
+            color: "Amarillo",
+            logo: "https://i.ibb.co/mBzGGpw/gemini.jpg"
+        },
+        {
+            id: 4,
+            nombre: "Cáncer",
+            fechas: "21 de Junio - 22 de Julio",
+            elemento: "Agua",
+            planetaRegente: "Luna",
+            simbolo: "Cangrejo",
+            color: "Plata",
+            logo: "https://i.ibb.co/JChgNxq/cancer.jpg"
+        },
+        {
+            id: 5,
+            nombre: "Leo",
+            fechas: "23 de Julio - 22 de Agosto",
+            elemento: "Fuego",
+            planetaRegente: "Sol",
+            simbolo: "León",
+            color: "Dorado",
+            logo: "https://i.ibb.co/YPFY0nS/leo.jpg"
+        },
+        {
+            id: 6,
+            nombre: "Virgo",
+            fechas: "23 de Agosto - 22 de Septiembre",
+            elemento: "Tierra",
+            planetaRegente: "Mercurio",
+            simbolo: "Virgen",
+            color: "Marrón",
+            logo: "https://i.ibb.co/Yb8PNTW/virgo.jpg"
+        },
+        {
+            id: 7,
+            nombre: "Libra",
+            fechas: "23 de Septiembre - 22 de Octubre",
+            elemento: "Aire",
+            planetaRegente: "Venus",
+            simbolo: "Balanza",
+            color: "Rosa",
+            logo: "https://i.ibb.co/Gvftwzt/libra.jpg"
+        },
+        {
+            id: 8,
+            nombre: "Escorpio",
+            fechas: "23 de Octubre - 21 de Noviembre",
+            elemento: "Agua",
+            planetaRegente: "Plutón",
+            simbolo: "Escorpión",
+            color: "Negro",
+            logo: "https://i.ibb.co/1LfFsgM/scorpio.jpg"
+        },
+        {
+            id: 9,
+            nombre: "Sagitario",
+            fechas: "22 de Noviembre - 21 de Diciembre",
+            elemento: "Fuego",
+            planetaRegente: "Júpiter",
+            simbolo: "Arquero",
+            color: "Púrpura",
+            logo: "https://i.ibb.co/mzdQKZ5/sagittarius.jpg"
+        },
+        {
+            id: 10,
+            nombre: "Capricornio",
+            fechas: "22 de Diciembre - 19 de Enero",
+            elemento: "Tierra",
+            planetaRegente: "Saturno",
+            simbolo: "Cabra",
+            color: "Marrón",
+            logo: "https://i.ibb.co/rG10wTL/capricorn.jpg"
+        },
+        {
+            id: 11,
+            nombre: "Acuario",
+            fechas: "20 de Enero - 18 de Febrero",
+            elemento: "Aire",
+            planetaRegente: "Urano",
+            simbolo: "Portador de Agua",
+            color: "Azul",
+            logo: "https://i.ibb.co/bPCZ2DB/aquarius.jpg"
+        },
+        {
+            id: 12,
+            nombre: "Piscis",
+            fechas: "19 de Febrero - 20 de Marzo",
+            elemento: "Agua",
+            planetaRegente: "Neptuno",
+            simbolo: "Peces",
+            color: "Verde claro",
+            logo: "https://i.ibb.co/9wnR1f1/pisces.jpg"
+        }
+    ];
+    res.json(signES);
+});
+
 
 const port = 3000;
 app.listen(port, () => {
