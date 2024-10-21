@@ -621,6 +621,366 @@ app.get('/es/sign', (req, res) => {
     res.json(signES);
 });
 
+app.get('/es/sign/:id', (req, res) => {
+    const idES = [
+        {
+            id: 1,
+            nombre: "Aries",
+            fechas: "21 de Marzo - 19 de Abril",
+            elemento: "Fuego",
+            planetaRegente: "Marte",
+            simbolo: "Carnero",
+            color: "Rojo",
+            fortalezas: [
+                "Valiente",
+                "Determinado",
+                "Confiado",
+                "Entusiasta",
+                "Optimista",
+                "Honesto",
+                "Apasionado"
+            ],
+            debilidades: [
+                "Impaciente",
+                "Temperamental",
+                "Impulsivo",
+                "Agresivo"
+            ],
+            descripcion: "Aries es un signo de liderazgo, impulsivo y aventurero. A menudo toman la iniciativa y tienen una naturaleza competitiva que los lleva a ser pioneros en lo que hacen.",
+            compatibilidad: [
+                "Leo",
+                "Sagitario",
+                "Géminis",
+                "Acuario"
+            ]
+        },
+        {
+            id: 2,
+            nombre: "Tauro",
+            fechas: "20 de Abril - 20 de Mayo",
+            elemento: "Tierra",
+            planetaRegente: "Venus",
+            simbolo: "Toro",
+            color: "Verde",
+            fortalezas: [
+                "Fiable",
+                "Paciente",
+                "Práctico",
+                "Devoto",
+                "Responsable",
+                "Estable"
+            ],
+            debilidades: [
+                "Terco",
+                "Posesivo",
+                "Intransigente"
+            ],
+            descripcion: "Tauro es un signo que valora la estabilidad y la seguridad. Son personas prácticas y confiables, pero también pueden ser muy tercos cuando han tomado una decisión.",
+            compatibilidad: [
+                "Virgo",
+                "Capricornio",
+                "Cáncer",
+                "Piscis"
+            ]
+        },
+        {
+            id: 3,
+            nombre: "Géminis",
+            fechas: "21 de Mayo - 20 de Junio",
+            elemento: "Aire",
+            planetaRegente: "Mercurio",
+            simbolo: "Gemelos",
+            color: "Amarillo",
+            fortalezas: [
+                "Afectuoso",
+                "Curioso",
+                "Adaptable",
+                "Ágil mentalmente",
+                "Expresivo"
+            ],
+            debilidades: [
+                "Nervioso",
+                "Inconsistente",
+                "Indeciso"
+            ],
+            descripcion: "Géminis es el signo de la dualidad y la comunicación. Las personas de este signo son rápidas de mente y tienen una gran capacidad para adaptarse a nuevas situaciones.",
+            compatibilidad: [
+                "Libra",
+                "Acuario",
+                "Aries",
+                "Leo"
+            ]
+        },
+        {
+            id: 4,
+            nombre: "Cáncer",
+            fechas: "21 de Junio - 22 de Julio",
+            elemento: "Agua",
+            planetaRegente: "Luna",
+            simbolo: "Cangrejo",
+            color: "Plata",
+            fortalezas: [
+                "Tenaz",
+                "Altamente imaginativo",
+                "Leal",
+                "Emocional",
+                "Simpático",
+                "Persuasivo"
+            ],
+            debilidades: [
+                "Temperamental",
+                "Pesimista",
+                "Desconfiado",
+                "Manipulador",
+                "Inseguro"
+            ],
+            descripcion: "Cáncer es un signo emocional y protector. Son conocidos por su lealtad y fuerte apego a la familia y el hogar. A menudo tienen un instinto de proteger a los que aman.",
+            compatibilidad: [
+                "Escorpio",
+                "Piscis",
+                "Tauro",
+                "Virgo"
+            ]
+        },
+        {
+            id: 5,
+            nombre: "Leo",
+            fechas: "23 de Julio - 22 de Agosto",
+            elemento: "Fuego",
+            planetaRegente: "Sol",
+            simbolo: "León",
+            color: "Dorado",
+            fortalezas: [
+                "Creativo",
+                "Apasionado",
+                "Generoso",
+                "De buen corazón",
+                "Alegre",
+                "Humorístico"
+            ],
+            debilidades: [
+                "Arrogante",
+                "Terco",
+                "Egocéntrico",
+                "Perezoso",
+                "Inflexible"
+            ],
+            descripcion: "Leo es un signo de carisma, energía y confianza. Les encanta ser el centro de atención y son muy creativos. A veces pueden parecer dominantes, pero su generosidad los caracteriza.",
+            compatibilidad: [
+                "Aries",
+                "Sagitario",
+                "Géminis",
+                "Libra"
+            ]
+        },
+        {
+            id: 6,
+            nombre: "Virgo",
+            fechas: "23 de Agosto - 22 de Septiembre",
+            elemento: "Tierra",
+            planetaRegente: "Mercurio",
+            simbolo: "Virgen",
+            color: "Marrón",
+            fortalezas: [
+                "Leal",
+                "Analítico",
+                "Amable",
+                "Trabajador",
+                "Práctico"
+            ],
+            debilidades: [
+                "Tímido",
+                "Preocupado",
+                "Crítico con los demás",
+                "Perfeccionista"
+            ],
+            descripcion: "Virgo es un signo de perfección y análisis. Las personas nacidas bajo este signo son detallistas y muy organizadas, pero también pueden ser excesivamente críticos consigo mismos y con los demás.",
+            compatibilidad: [
+                "Tauro",
+                "Capricornio",
+                "Cáncer",
+                "Escorpio"
+            ]
+        },
+        {
+            id: 7,
+            nombre: "Libra",
+            fechas: "23 de Septiembre - 22 de Octubre",
+            elemento: "Aire",
+            planetaRegente: "Venus",
+            simbolo: "Balanza",
+            color: "Rosa",
+            fortalezas: [
+                "Diplomático",
+                "Cooperativo",
+                "Justo",
+                "Social"
+            ],
+            debilidades: [
+                "Indeciso",
+                "Evita confrontaciones",
+                "Rencoroso",
+                "Autocompasivo"
+            ],
+            descripcion: "Libra es el signo de la justicia y el equilibrio. Siempre buscan armonía en sus relaciones y tienen un fuerte sentido de la diplomacia, pero pueden ser indecisos al tomar decisiones.",
+            compatibilidad: [
+                "Géminis",
+                "Acuario",
+                "Leo",
+                "Sagitario"
+            ]
+        },
+        {
+            id: 8,
+            nombre: "Escorpio",
+            fechas: "23 de Octubre - 21 de Noviembre",
+            elemento: "Agua",
+            planetaRegente: "Plutón",
+            simbolo: "Escorpión",
+            color: "Negro",
+            fortalezas: [
+                "Valiente",
+                "Apasionado",
+                "Fiel",
+                "Tenaz"
+            ],
+            debilidades: [
+                "Desconfiado",
+                "Celoso",
+                "Reservado",
+                "Violento"
+            ],
+            descripcion: "Escorpio es un signo intenso y emocional. Las personas nacidas bajo este signo son profundamente apasionadas y tienen una naturaleza decidida. Pueden ser muy reservados y misteriosos.",
+            compatibilidad: [
+                "Cáncer",
+                "Piscis",
+                "Virgo",
+                "Capricornio"
+            ]
+        },
+        {
+            id: 9,
+            nombre: "Sagitario",
+            fechas: "22 de Noviembre - 21 de Diciembre",
+            elemento: "Fuego",
+            planetaRegente: "Júpiter",
+            simbolo: "Arquero",
+            color: "Púrpura",
+            fortalezas: [
+                "Generoso",
+                "Idealista",
+                "Gran sentido del humor"
+            ],
+            debilidades: [
+                "Impaciente",
+                "Promesas exageradas",
+                "Poco diplomático"
+            ],
+            descripcion: "Sagitario es un signo aventurero y optimista. Son personas que disfrutan explorando nuevas ideas y lugares, y siempre buscan expandir sus horizontes, pero a veces pueden ser imprudentes.",
+            compatibilidad: [
+                "Aries",
+                "Leo",
+                "Libra",
+                "Acuario"
+            ]
+        },
+        {
+            id: 10,
+            nombre: "Capricornio",
+            fechas: "22 de Diciembre - 19 de Enero",
+            elemento: "Tierra",
+            planetaRegente: "Saturno",
+            simbolo: "Cabra",
+            color: "Marrón",
+            fortalezas: [
+                "Responsable",
+                "Disciplinado",
+                "Autocontrol",
+                "Buen liderazgo"
+            ],
+            debilidades: [
+                "Sabe-lo-todo",
+                "Inflexible",
+                "Condescendiente",
+                "Pesimista"
+            ],
+            descripcion: "Capricornio es un signo ambicioso y pragmático. Tienen una fuerte ética de trabajo y se fijan metas altas, pero pueden ser algo fríos o distantes en su enfoque hacia las relaciones.",
+            compatibilidad: [
+                "Tauro",
+                "Virgo",
+                "Escorpio",
+                "Piscis"
+            ]
+        },
+        {
+            id: 11,
+            nombre: "Acuario",
+            fechas: "20 de Enero - 18 de Febrero",
+            elemento: "Aire",
+            planetaRegente: "Urano",
+            simbolo: "Portador de Agua",
+            color: "Azul",
+            fortalezas: [
+                "Progresista",
+                "Original",
+                "Independiente",
+                "Humanitario"
+            ],
+            debilidades: [
+                "Se distancia emocionalmente",
+                "Temperamental",
+                "Inflexible",
+                "Reservado"
+            ],
+            descripcion: "Acuario es un signo de visión de futuro, originalidad y humanitarismo. Las personas de este signo son innovadoras y les gusta romper con lo convencional, aunque a veces pueden parecer desapegadas o distantes.",
+            compatibilidad: [
+                "Géminis",
+                "Libra",
+                "Sagitario",
+                "Aries"
+            ]
+        },
+        {
+            id: 12,
+            nombre: "Piscis",
+            fechas: "19 de Febrero - 20 de Marzo",
+            elemento: "Agua",
+            planetaRegente: "Neptuno",
+            simbolo: "Peces",
+            color: "Verde claro",
+            fortalezas: [
+                "Compasivo",
+                "Artístico",
+                "Intuitivo",
+                "Amable",
+                "Sabio",
+                "Musical"
+            ],
+            debilidades: [
+                "Temeroso",
+                "Excesivamente confiado",
+                "Triste",
+                "Tendencia a escapar de la realidad"
+            ],
+            descripcion: "Piscis es un signo de empatía, sensibilidad y espiritualidad. Son personas muy compasivas que a menudo tienen una conexión emocional profunda con su entorno. Sin embargo, pueden ser susceptibles a las influencias externas y tienden a escapar de la realidad.",
+            compatibilidad: [
+                "Cáncer",
+                "Escorpio",
+                "Tauro",
+                "Capricornio"
+            ]
+        }
+    ];
+
+    const element = parseInt(req.params.id);
+    const sign = idES.find(e => e.id === element);
+
+    if (sign) {
+        res.json(sign)
+    } else {
+        res.status(404).json({message: "Sign not found 404"})
+    }
+});
 
 const port = 3000;
 app.listen(port, () => {
