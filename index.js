@@ -144,6 +144,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Mars",
             symbol: "Ram",
             color: "Red",
+            image: "https://i.ibb.co/LQTxGRd/aries.jpg",
             strengths: [
                 "Courageous",
                 "Determined",
@@ -175,6 +176,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Venus",
             symbol: "Bull",
             color: "Green",
+            image: "https://i.ibb.co/sPLrrwD/taurus.jpg",
             strengths: [
                 "Reliable",
                 "Patient",
@@ -204,6 +206,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Mercury",
             symbol: "Twins",
             color: "Yellow",
+            image: "https://i.ibb.co/mBzGGpw/gemini.jpg",
             strengths: [
                 "Affectionate",
                 "Curious",
@@ -232,6 +235,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Moon",
             symbol: "Crab",
             color: "Silver",
+            image: "https://i.ibb.co/JChgNxq/cancer.jpg",
             strengths: [
                 "Tenacious",
                 "Highly imaginative",
@@ -263,6 +267,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Sun",
             symbol: "Lion",
             color: "Gold",
+            image: "https://i.ibb.co/YPFY0nS/leo.jpg",
             strengths: [
                 "Creative",
                 "Passionate",
@@ -294,6 +299,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Mercury",
             symbol: "Virgin",
             color: "Brown",
+            image: "https://i.ibb.co/Yb8PNTW/virgo.jpg",
             strengths: [
                 "Loyal",
                 "Analytical",
@@ -323,6 +329,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Venus",
             symbol: "Scales",
             color: "Pink",
+            image: "https://i.ibb.co/Gvftwzt/libra.jpg",
             strengths: [
                 "Diplomatic",
                 "Cooperative",
@@ -351,6 +358,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Pluto",
             symbol: "Scorpion",
             color: "Black",
+            image: "https://i.ibb.co/1LfFsgM/scorpio.jpg",
             strengths: [
                 "Brave",
                 "Passionate",
@@ -379,6 +387,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Jupiter",
             symbol: "Archer",
             color: "Purple",
+            image: "https://i.ibb.co/mzdQKZ5/sagittarius.jpg",
             strengths: [
                 "Generous",
                 "Idealistic",
@@ -405,6 +414,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Saturn",
             symbol: "Goat",
             color: "Brown",
+            image: "https://i.ibb.co/rG10wTL/capricorn.jpg",
             strengths: [
                 "Responsible",
                 "Disciplined",
@@ -433,6 +443,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Uranus",
             symbol: "Water Bearer",
             color: "Blue",
+            image: "https://i.ibb.co/bPCZ2DB/aquarius.jpg",
             strengths: [
                 "Progressive",
                 "Original",
@@ -461,6 +472,7 @@ app.get('/sign/:id', (req, res) => {
             rulingPlanet: "Neptune",
             symbol: "Fish",
             color: "Light Green",
+            image: "https://i.ibb.co/9wnR1f1/pisces.jpg",
             strengths: [
                 "Compassionate",
                 "Artistic",
@@ -631,6 +643,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Marte",
             simbolo: "Carnero",
             color: "Rojo",
+            imagen: "https://i.ibb.co/LQTxGRd/aries.jpg",
             fortalezas: [
                 "Valiente",
                 "Determinado",
@@ -662,6 +675,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Venus",
             simbolo: "Toro",
             color: "Verde",
+            image: "https://i.ibb.co/sPLrrwD/taurus.jpg",
             fortalezas: [
                 "Fiable",
                 "Paciente",
@@ -691,6 +705,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Mercurio",
             simbolo: "Gemelos",
             color: "Amarillo",
+            imagen: "https://i.ibb.co/mBzGGpw/gemini.jpg",
             fortalezas: [
                 "Afectuoso",
                 "Curioso",
@@ -719,6 +734,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Luna",
             simbolo: "Cangrejo",
             color: "Plata",
+            imagen: "https://i.ibb.co/JChgNxq/cancer.jpg",
             fortalezas: [
                 "Tenaz",
                 "Altamente imaginativo",
@@ -750,6 +766,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Sol",
             simbolo: "León",
             color: "Dorado",
+            imagen: "https://i.ibb.co/YPFY0nS/leo.jpg",
             fortalezas: [
                 "Creativo",
                 "Apasionado",
@@ -781,6 +798,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Mercurio",
             simbolo: "Virgen",
             color: "Marrón",
+            imagen: "https://i.ibb.co/Yb8PNTW/virgo.jpg",
             fortalezas: [
                 "Leal",
                 "Analítico",
@@ -810,6 +828,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Venus",
             simbolo: "Balanza",
             color: "Rosa",
+            imagen: "https://i.ibb.co/Gvftwzt/libra.jpg",
             fortalezas: [
                 "Diplomático",
                 "Cooperativo",
@@ -838,6 +857,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Plutón",
             simbolo: "Escorpión",
             color: "Negro",
+            imagen: "https://i.ibb.co/1LfFsgM/scorpio.jpg",
             fortalezas: [
                 "Valiente",
                 "Apasionado",
@@ -866,6 +886,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Júpiter",
             simbolo: "Arquero",
             color: "Púrpura",
+            imagen: "https://i.ibb.co/mzdQKZ5/sagittarius.jpg",
             fortalezas: [
                 "Generoso",
                 "Idealista",
@@ -892,6 +913,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Saturno",
             simbolo: "Cabra",
             color: "Marrón",
+            imagen: "https://i.ibb.co/rG10wTL/capricorn.jpg",
             fortalezas: [
                 "Responsable",
                 "Disciplinado",
@@ -920,6 +942,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Urano",
             simbolo: "Portador de Agua",
             color: "Azul",
+            imagen: "https://i.ibb.co/bPCZ2DB/aquarius.jpg",
             fortalezas: [
                 "Progresista",
                 "Original",
@@ -948,6 +971,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Neptuno",
             simbolo: "Peces",
             color: "Verde claro",
+            imagen: "https://i.ibb.co/9wnR1f1/pisces.jpg",
             fortalezas: [
                 "Compasivo",
                 "Artístico",
