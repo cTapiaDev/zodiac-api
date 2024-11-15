@@ -675,7 +675,7 @@ app.get('/es/sign/:id', (req, res) => {
             planetaRegente: "Venus",
             simbolo: "Toro",
             color: "Verde",
-            image: "https://i.ibb.co/sPLrrwD/taurus.jpg",
+            imagen: "https://i.ibb.co/sPLrrwD/taurus.jpg",
             fortalezas: [
                 "Fiable",
                 "Paciente",
